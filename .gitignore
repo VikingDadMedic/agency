@@ -12,3 +12,5 @@ dist
 .netlify
 .directus/data
 .directus/uploads
+
+.cosine

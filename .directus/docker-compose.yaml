@@ -9,9 +9,9 @@ services:
     volumes:
       - ./data/database:/var/lib/postgresql/data
     environment:
-      POSTGRES_USER: 'directus'
-      POSTGRES_PASSWORD: 'directus'
-      POSTGRES_DB: 'directus'
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'vsGh0StK3Y0mega850xGh0StK3Y2023xZ'
+      POSTGRES_DB: 'postgres'
 
   cache:
     image: redis:6
@@ -34,16 +34,16 @@ services:
       DB_CLIENT: 'pg'
       DB_HOST: 'database'
       DB_PORT: '5432'
-      DB_DATABASE: 'directus'
-      DB_USER: 'directus'
-      DB_PASSWORD: 'directus'
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'vsGh0StK3Y0mega850xGh0StK3Y2023xZ'
+      POSTGRES_DB: 'postgres'
 
       CACHE_ENABLED: 'false'
       CACHE_STORE: 'redis'
       REDIS: 'redis://cache:6379'
 
-      ADMIN_EMAIL: 'admin@example.com'
-      ADMIN_PASSWORD: 'd1r3ctu5'
+      ADMIN_EMAIL: 'admin@voyagersocial.io'
+      ADMIN_PASSWORD: 'vsGh0StK3Y0mega850xGh0StK3Y2023xZ'
 
       # These is helpful for local developement but should probably be removed in production
       CORS_ENABLED: 'true'
@@ -53,7 +53,6 @@ services:
       WEBSOCKETS_ENABLED: 'true'
       # The default config prevents importing files from 0.0.0.0. See https://docs.directus.io/self-hosted/config-options.html#security . This can be removed in production but in local development it is recommended to keep it so you can import logos from Organization > website.
       IMPORT_IP_DENY_LIST: ''
-
       # Make sure to set this in production
       # (see https://docs.directus.io/self-hosted/config-options#general)
       # PUBLIC_URL: 'https://directus.example.com'
